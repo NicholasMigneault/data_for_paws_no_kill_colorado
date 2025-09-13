@@ -1,0 +1,28 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# secrets
+.env
+
+# dlt environment config
+secrets.toml
+.dlt/
+# *.duckdb
+
+# dbt
+target/
+dbt_packages/
+logs/
+
+
+
+# other
+exploratory/
