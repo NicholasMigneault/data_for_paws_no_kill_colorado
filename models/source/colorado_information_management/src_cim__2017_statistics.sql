@@ -214,3 +214,4 @@ select
     , _dlt_load_id
     , _dlt_id
 from {{ source('cim', 'cim_2017_stats') }}
+where facility_name is not null

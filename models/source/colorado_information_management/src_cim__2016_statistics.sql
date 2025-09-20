@@ -240,6 +240,7 @@ select
     , _dlt_id
 from {{ source('cim', 'cim_2016_stats') }}
 where adult_dogs is null -- this filters out all placeholder rows
+    and facility_name is not null -- this filters out other notes/disclaimers entered as distinct rows
 
 
 

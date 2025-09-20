@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: src_cim__2016_statistics
+    description: >
+        Shelter statistics compiled and distributed by PACFA for 2016. Data is distributed by Open Data Colorado, instead of just as a public google sheet. Ingestion done via Rest API
+    columns:
+      - name: _dlt_id
+        data_type: varchar
+        description: >
+            {{ doc('dlt_id') }}
+        data_tests:
+            - unique
+            - not_null
+
+      - name: _id
+        data_type: varchar
+        description: >
+            API unique id metadata
+        data_tests:
+            - unique
+            - not_null
+
+      - name: pacfa_license_number
+        data_type: varchar
+        description: >
+            {{ doc('pacfa_license_number') }}
+        data_tests:
+            - unique
+            - not_null
+
+      - name: facility_name
+        data_type: varchar
+        description: >
+            {{ doc('source_facility_name') }}
+        data_tests:
+            - not_null
