@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: src_google_sheets__2020_statistics
+    description: >
+        Shelter statistics compiled and distributed via PACFA for 2020
+    columns:
+      - name: _dlt_id
+        data_type: varchar
+        description: >
+            {{ doc('dlt_id') }}
+        data_tests:
+            - unique
+            - not_null
+
+      - name: facility_name
+        data_type: varchar
+        description: >
+            {{ doc('source_facility_name') }}
+        data_tests:
+            - unique
+            - not_null

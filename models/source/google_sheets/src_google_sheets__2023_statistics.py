@@ -24,6 +24,10 @@ def model(dbt, session):
     body = df.iloc[1:].to_numpy()
 
     # create new df
-    final_df = pd.DataFrame(data=body, columns=headers)
+    formatted_df = pd.DataFrame(data=body, columns=headers)
 
-    return final_df
+    # aggregate to prevent duplicate facility names
+    final_df = formatted_df.groupby('Facility_Name').sum().reset_index()
+
+    # final table, swap this to final_df to aggregate dupe facility names into the source table
+    return formatted_df
