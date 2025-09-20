@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: cim
+    database: data
+    schema: raw
+    description: >
+      Source for API ingested shelter statistics data that is published by the Pet Animal Care Facilities Act (PACFA) and are available through Open Data Colorado
+    tables:
+      - name: cim_2015_stats
+      - name: cim_2016_stats
+      - name: cim_2017_stats
