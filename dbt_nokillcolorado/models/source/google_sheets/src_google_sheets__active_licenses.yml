@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: src_google_sheets__active_licenses
+    description: ""
+    columns:
+      - name: active_license_sk
+        data_type: varchar
+        description: ""
+
+      - name: account_name
+        data_type: varchar
+        description: ""
+
+      - name: dba
+        data_type: varchar
+        description: ""
+
+      - name: license_type
+        data_type: varchar
+        description: ""
+
+      - name: license_expiration_date
+        data_type: varchar
+        description: ""
+
+      - name: city
+        data_type: varchar
+        description: ""
+
+      - name: state
+        data_type: varchar
+        description: ""
+
+      - name: county
+        data_type: varchar
+        description: ""

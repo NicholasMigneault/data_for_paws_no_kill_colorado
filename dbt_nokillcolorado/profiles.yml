@@ -1,0 +1,9 @@
+dbt_nokillcolorado:
+  outputs:
+    prod:
+      type: duckdb
+      schema: dbt
+      path: ..\data\data.duckdb
+      threads: 4
+
+  target: prod
