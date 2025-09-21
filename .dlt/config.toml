@@ -1,0 +1,36 @@
+# put your configuration values here
+
+[runtime]
+log_level="WARNING"  # the system log level of dlt
+# use the dlthub_telemetry setting to enable/disable anonymous usage data reporting, see https://dlthub.com/docs/reference/telemetry
+dlthub_telemetry = true
+
+[ sources.cim_endpoints ]
+2015 = '773d-wy2e'
+2016 = 'm8vm-brgw'
+2017 = 'uhi6-hddy'
+
+[sources.google_sheets]
+url_or_id_2018 = "1556ldXplf8YcxT44XMjenfqBT6_bJc0wU0IpPeAGdhs"
+range_names_2018 = ["Form Responses 1!A1:FQ329"]
+
+url_or_id_2019 = "1mY0ckZ7AKwlgeZv5uMA6eah7QwabyPv47SGNuqrO20I"
+range_names_2019 = ["2019 Responses!A1:EX350"]
+
+url_or_id_2020 = "1Q5M7Zw_A-Kn2V7csyxGqleVXWliLVQ4e080aNI7oIiE"
+range_names_2020 = ["2019 Responses!A1:EX357"]
+
+url_or_id_2021 = "1E-Suwl9z_e8-W1JuP5HVmIKv6C4mpd73pFpgtCdrTkQ"
+range_names_2021 = ["Sheet1!A1:EX355"]
+
+url_or_id_2022 = "1mmsehBjl-V1eVueiCJEjFV6PhM6eKaCCPFIfcrk7IKk"
+range_names_2022 = ["Sheet1!A1:EX370"]
+
+url_or_id_2023 = "1zlh79aLdicsDVjZoxfwVm8SY1iFlKm-GBI34TMk1I30"
+range_names_2023 = ["Sheet1!A1:EX348"]
+
+url_or_id_2024 = "1qn6KDN2e0mpDxUY9j7sYG-f254q620xwFq95gD7Udn8"
+range_names_2024 = ["Sheet1!A1:EX361"]
+
+url_or_id_active_licenses = "1q5PSJaDc-cpfKXBn6tQbg0jVxvwyrCNZUBk-5CCortA"
+range_names_active_licenses = ["Active List!A1:G2959"]
