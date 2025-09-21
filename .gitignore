@@ -13,16 +13,9 @@ wheels/
 .env
 
 # dlt environment config
-secrets.toml
-.dlt/
-# *.duckdb
-
-# dbt
-target/
-dbt_packages/
-logs/
-
-
+.dlt/*.*
+!.dlt/config.toml
+!.dlt/secrets.toml-example
 
 # other
 exploratory/
