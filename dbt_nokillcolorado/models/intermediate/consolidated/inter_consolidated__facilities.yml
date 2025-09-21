@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: inter_consolidated__facilities
+    description: ""
+    columns:
+      - name: facility_name
+        data_type: varchar
+        description: ""
+        data_tests:
+          - unique
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('inter_consolidated__shelter_statistics')
+                field: facility_name
