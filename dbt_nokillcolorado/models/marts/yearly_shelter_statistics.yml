@@ -1,0 +1,119 @@
+version: 2
+
+models:
+  - name: yearly_shelter_statistics
+    description: ""
+    columns:
+      - name: statistic_sk
+        data_type: varchar
+        description: >
+          dbt generated primary key, unique on facility, year, and animal category/type. Not always unique, if duplicate data is present in source 
+        #data_tests:
+        #  - unique
+        #  - not_null
+
+      - name: facility_sk
+        data_type: varchar
+        description: >
+          dbt generated foreign key that relates this table to facilities table
+
+      - name: year
+        data_type: varchar
+        description: ""
+
+      - name: start_of_year_date
+        data_type: date
+        description: ""
+
+      - name: end_of_year_date
+        data_type: date
+        description: ""
+
+      - name: facility_name
+        data_type: varchar
+        description: ""
+
+      - name: animal_category
+        data_type: varchar
+        description: >
+          High-level grouping of animals, either cat/dog/other
+
+      - name: animal_type
+        data_type: varchar
+        description: >
+          Specific grouping of animals, either adult/juvenile for cats or dogs, specific animal (rabbit, bird, etc) otherwise
+
+      - name: start_of_year_in_shelter_count
+        data_type: varchar
+        description: ""
+
+      - name: start_of_year_in_foster_care_count
+        data_type: varchar
+        description: ""
+
+      - name: intake_stray
+        data_type: varchar
+        description: ""
+
+      - name: intake_relinquished
+        data_type: varchar
+        description: ""
+
+      - name: intake_in_state_transfer
+        data_type: varchar
+        description: ""
+
+      - name: intake_out_of_state_transfer
+        data_type: varchar
+        description: ""
+
+      - name: intake_other
+        data_type: varchar
+        description: ""
+
+      - name: outcome_adoption
+        data_type: varchar
+        description: ""
+
+      - name: outcome_return_to_owner
+        data_type: varchar
+        description: ""
+
+      - name: outcome_in_state_transfer
+        data_type: varchar
+        description: ""
+
+      - name: outcome_out_of_state_transfer
+        data_type: varchar
+        description: ""
+
+      - name: outcome_other
+        data_type: varchar
+        description: ""
+
+      - name: outcome_deaths
+        data_type: varchar
+        description: ""
+
+      - name: outcome_euthanasia
+        data_type: varchar
+
+      - name: outcome_euthanasia
+        data_type: varchar
+        description: ""
+
+      - name: outcome_euthanasia
+        data_type: varchar
+        description: ""
+
+      - name: outcome_missing_or_stolen
+        data_type: varchar
+        description: ""
+
+      - name: end_of_year_in_shelter_count
+        data_type: varchar
+        description: ""
+
+      - name: end_of_year_in_foster_care_count
+        data_type: varchar
+        description: ""

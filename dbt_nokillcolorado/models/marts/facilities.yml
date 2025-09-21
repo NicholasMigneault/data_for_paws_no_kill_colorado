@@ -1,0 +1,61 @@
+version: 2
+
+models:
+  - name: facilities
+    description: ""
+    columns:
+      - name: facility_sk
+        data_type: varchar
+        description: >
+          dbt generated foreign key that relates this table to facilities table
+        #data_tests:
+        #  - unique
+        #  - not_null
+
+      - name: facility_name
+        data_type: varchar
+        description: ""
+
+      - name: account_name
+        data_type: varchar
+        description: ""
+
+      - name: dba
+        data_type: varchar
+        description: ""
+
+      - name: pacfa_license_number
+        data_type: varchar
+        description: ""
+
+      - name: address
+        data_type: varchar
+        description: ""
+
+      - name: city
+        data_type: varchar
+        description: ""
+
+      - name: county
+        data_type: varchar
+        description: ""
+
+      - name: state
+        data_type: varchar
+        description: ""
+
+      - name: zip_code
+        data_type: varchar
+        description: ""
+
+      - name: latitude
+        data_type: double
+        description: ""
+
+      - name: longitude
+        data_type: double
+        description: ""
+
+      - name: region_polygon
+        data_type: varchar
+        description: ""
