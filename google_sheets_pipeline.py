@@ -120,6 +120,38 @@ def configure_years():
         'id': dlt.config['sources.google_sheets.url_or_id_2018'],
         'range': dlt.config['sources.google_sheets.range_names_2018']
     }
+    list_configuration['2014'] = {
+        'id': dlt.config['sources.google_sheets.url_or_id_2014'],
+        'range': dlt.config['sources.google_sheets.range_names_2014']
+    }
+    list_configuration['2013'] = {
+        'id': dlt.config['sources.google_sheets.url_or_id_2013'],
+        'range': dlt.config['sources.google_sheets.range_names_2013']
+    }
+    list_configuration['2012'] = {
+        'id': dlt.config['sources.google_sheets.url_or_id_2012'],
+        'range': dlt.config['sources.google_sheets.range_names_2012']
+    }
+    list_configuration['2011'] = {
+        'id': dlt.config['sources.google_sheets.url_or_id_2011'],
+        'range': dlt.config['sources.google_sheets.range_names_2011']
+    }
+    list_configuration['2010'] = {
+        'id': dlt.config['sources.google_sheets.url_or_id_2010'],
+        'range': dlt.config['sources.google_sheets.range_names_2010']
+    }
+    list_configuration['2009'] = {
+        'id': dlt.config['sources.google_sheets.url_or_id_2009'],
+        'range': dlt.config['sources.google_sheets.range_names_2009']
+    }
+    list_configuration['2008'] = {
+        'id': dlt.config['sources.google_sheets.url_or_id_2008'],
+        'range': dlt.config['sources.google_sheets.range_names_2008']
+    }
+    list_configuration['2007'] = {
+        'id': dlt.config['sources.google_sheets.url_or_id_2007'],
+        'range': dlt.config['sources.google_sheets.range_names_2007']
+    }
 
     return list_configuration
 
@@ -128,4 +160,5 @@ if __name__ == "__main__":
     load_pipeline_with_ranges(dlt.config['sources.google_sheets.url_or_id_active_licenses'], dlt.config['sources.google_sheets.range_names_active_licenses'], 'active_licenses')
     
     # core yearly statistic pipeline run
+    # gotta fix the outflow tables in raw
     load_multi_year_statistics(configure_years())

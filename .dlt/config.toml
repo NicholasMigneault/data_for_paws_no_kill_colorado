@@ -34,3 +34,27 @@ range_names_2024 = ["Sheet1!A1:EX361"]
 
 url_or_id_active_licenses = "1q5PSJaDc-cpfKXBn6tQbg0jVxvwyrCNZUBk-5CCortA"
 range_names_active_licenses = ["Active List!A1:G2959"]
+
+url_or_id_2014 = "1aptkZ8FpLa7b94YHmAuQkVufa-0W1js1FXQdlOewupo"
+range_names_2014 = ["2014_Animal_Shelter_Rescue!A1:HE256"]
+
+url_or_id_2013 = "1DjZ9cYKT9sBC1oNBD8HUuS3Zpu1m1qAVETigNPYKNqQ"
+range_names_2013 = ["Intake!B1:AU279", "Outflow!A1:BE279"]
+
+url_or_id_2012 = "1cZZFmS-o9QAwi1RrMnoy2gYiF_myL61sr6ynVfNOu6Y"
+range_names_2012 = ["Intake!A1:AT280", "Outflow!A1:BD281"]
+
+url_or_id_2011 = "14Y6F_BRnpv4BtMYT4U5QPmCk8rKUB5YF1OCTmpoTkyw"
+range_names_2011 = ["Intake!A1:AT263", "Outflow!A1:BD263"]
+
+url_or_id_2010 = "1v0x7Pe_zYEEM0g-MyWXbpC1ZpkqpzCOTuJt3tw-y_XY"
+range_names_2010 = ["Intake!A1:AT260", "Outflow!A1:BD265"]
+
+url_or_id_2009 = "11A67bHzjsJ2SSIyFIoK5MNbIdlSXtORDDtcHA_adcsg"
+range_names_2009 = ["Intake!A1:BB273", "Outflow!A1:BN273"]
+
+url_or_id_2008 = "1Av7-Wr-Lf5G3lbjz6BOJfONgdPqfD_VyeG9eBWazU6A"
+range_names_2008 = ["Intake!A1:BB275", "Outflow!A1:BO275"]
+
+url_or_id_2007 = "1CvEIJbREKwJRMFqkTOFWd2u6Bb_JZzhwLkU1JHdiYFE"
+range_names_2007 = ["2007!A1:AA296"]
