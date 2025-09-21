@@ -7,6 +7,9 @@ models:
       - name: active_license_sk
         data_type: varchar
         description: ""
+        data_tests:
+          - unique
+          - not_null
 
       - name: account_name
         data_type: varchar

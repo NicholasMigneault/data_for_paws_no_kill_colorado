@@ -8,7 +8,7 @@ sources:
       Source for public google sheet shelter statistics that are published by the Pet Animal Care Facilities Act (PACFA)
     tables:
       - name: spreadsheet_info
-      - name: statistics_licenses
+      - name: gsheet_active_licenses
       - name: gsheet_2024_stats
       - name: gsheet_2023_stats
       - name: gsheet_2022_stats
