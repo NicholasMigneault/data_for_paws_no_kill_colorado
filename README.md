@@ -86,6 +86,7 @@ root
 - Automate `dbt build` via [dlt runner](https://dlthub.com/docs/dlt-ecosystem/transformations/dbt/)
 - Update `convert_duckdb_to_csv` to dlt pipeline, update query to run off information schema instead of hard-coding
 - Automate data refresh with github actions
+- Update marts documentation
 
 #### Other Reading
 - [Modern Data Stack In-a-Box](https://duckdb.org/2022/10/12/modern-data-stack-in-a-box.html)
