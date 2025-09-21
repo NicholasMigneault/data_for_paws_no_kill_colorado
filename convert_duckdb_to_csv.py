@@ -7,7 +7,7 @@ def to_csv_query(table_name: str):
 
 if __name__ == "__main__":
     # define tables to also check into version control as csvs
-    marts_tables = ['yearly_shelter_statistics']
+    marts_tables = ['yearly_shelter_statistics', 'facilities']
 
     # connect to in-repo duckdb database
     con = duckdb.connect("data/data.duckdb")
