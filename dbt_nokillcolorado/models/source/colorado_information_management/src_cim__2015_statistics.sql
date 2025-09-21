@@ -5,7 +5,7 @@ select
     , pacfa_license_number
     , facility_physical_street_address as facility_address
     , zip_code
-    , lower(county) as county
+    , county
 
     /* statistics */
     ,coalesce(adult_dogs_beginning_count::INTEGER,0)                                                         as adult_dogs_beginning_count

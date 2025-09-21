@@ -7,9 +7,9 @@ select
     , location_1__latitude
     , location_1__longitude
     , location_1__human_address::json as address_object
-    , lower(address_object->>'address') as facility_address 
-    , lower(address_object->>'city') as facility_city
-    , lower(address_object->>'state') as facility_state
+    , address_object->>'address' as facility_address 
+    , address_object->>'city' as facility_city
+    , address_object->>'state' as facility_state
     , address_object->>'zip' as facility_zip_code
     , _acomputed_region_nku6_53ud as region_polygon
 

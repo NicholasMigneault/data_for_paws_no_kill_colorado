@@ -1,7 +1,7 @@
 select 
 -- list all columns, 0 out nulls
     facility_namex                                                                  as facility_name
-    ,lower(county)                                                                  as facility_county
+    ,county                                                                         as facility_county
     ,coalesce(adult_dogs_in_shelter_count_as_of_1_1_2018,0)                         as adult_dogs_in_shelter_count_as_of_1_1_2018
     ,coalesce(adult_dogs_in_foster_care_count_1_1_2018,0)                           as adult_dogs_in_foster_care_count_1_1_2018
     ,coalesce(adult_dogs_stray,0)                                                   as adult_dogs_stray
