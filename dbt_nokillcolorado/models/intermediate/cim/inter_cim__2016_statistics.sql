@@ -17,7 +17,7 @@ with dogs as (
         ,adult_dogs_transfer_or_rescue_out_to_an_out_of_state_organization  as outcome_out_of_state_transfer
         ,adult_dogs_other_live_outcomes_ie_tnr_snr                          as outcome_other
         ,adult_dogs_died                                                    as outcome_deaths
-        ,adult_dogs_shelter_euthanasia                                      as outcome_euthanasia
+        ,total_adult_dogs_euthanasia                                        as outcome_euthanasia
         ,adult_dogs_missing_stolen                                          as outcome_missing_or_stolen
         ,adult_dogs_ending_count                                            as end_of_year_in_shelter_count
         ,adult_dogs_foster_count                                            as end_of_year_in_foster_care_count
@@ -40,7 +40,7 @@ with dogs as (
         ,juvenile_dogs_transfer_or_rescue_out_to_an_out_of_state_organization   as outcome_out_of_state_transfer
         ,juvenile_dogs_other_live_outcomes_ie_tnr_snr                           as outcome_other
         ,juvenile_dogs_died                                                     as outcome_deaths
-        ,juvenile_dogs_shelter_euthanasia                                       as outcome_euthanasia
+        ,total_juvenile_dogs_euthanasia                                         as outcome_euthanasia
         ,juvenile_dogs_missing_stolen                                           as outcome_missing_or_stolen
         ,juvenile_dogs_ending_count                                             as end_of_year_in_shelter_count
         ,juvenile_dogs_foster_count                                             as end_of_year_in_foster_care_count
@@ -64,7 +64,7 @@ with dogs as (
         ,adult_cats_transfer_or_rescue_out_to_an_out_of_state_organization  as outcome_out_of_state_transfer
         ,adult_cats_other_live_outcomes_ie_tnr_snr                          as outcome_other
         ,adult_cats_died                                                    as outcome_deaths
-        ,adult_cats_shelter_euthanasia                                      as outcome_euthanasia
+        ,total_adult_cats_euthanasia                                        as outcome_euthanasia
         ,adult_cats_missing_stolen                                          as outcome_missing_or_stolen
         ,adult_cats_ending_count                                            as end_of_year_in_shelter_count
         ,adult_cats_foster_count                                            as end_of_year_in_foster_care_count
@@ -87,7 +87,7 @@ with dogs as (
         ,juvenile_cats_transfer_or_rescue_out_to_an_out_of_state_organization   as outcome_out_of_state_transfer
         ,juvenile_cats_other_live_outcomes_ie_tnr_snr                           as outcome_other
         ,juvenile_cats_died                                                     as outcome_deaths
-        ,juvenile_cats_shelter_euthanasia                                       as outcome_euthanasia
+        ,total_juvenile_cats_euthanasia                                         as outcome_euthanasia
         ,juvenile_cats_missing_stolen                                           as outcome_missing_or_stolen
         ,juvenile_cats_ending_count                                             as end_of_year_in_shelter_count
         ,juvenile_cats_foster_count                                             as end_of_year_in_foster_care_count
@@ -111,7 +111,7 @@ with dogs as (
         ,birds_transfer_or_rescue_out_to_an_out_of_state_organization   as outcome_out_of_state_transfer
         ,birds_other_live_outcomes_ie_tnr_snr                           as outcome_other
         ,birds_died                                                     as outcome_deaths
-        ,birds_shelter_euthanasia                                       as outcome_euthanasia
+        ,total_birds_euthanasia                                         as outcome_euthanasia
         ,birds_missing_stolen                                           as outcome_missing_or_stolen
         ,birds_ending_count                                             as end_of_year_in_shelter_count
         ,birds_foster_count                                             as end_of_year_in_foster_care_count
@@ -134,7 +134,7 @@ with dogs as (
         ,sm_mammal_transfer_or_rescue_out_to_an_out_of_state_organization   as outcome_out_of_state_transfer
         ,sm_mammal_other_live_outcomes_ie_tnr_snr                           as outcome_other
         ,sm_mammal_died                                                     as outcome_deaths
-        ,sm_mammal_shelter_euthanasia                                       as outcome_euthanasia
+        ,total_sm_mammal_euthanasia                                         as outcome_euthanasia
         ,sm_mammal_missing_stolen                                           as outcome_missing_or_stolen
         ,sm_mammal_ending_count                                             as end_of_year_in_shelter_count
         ,sm_mammal_foster_count                                             as end_of_year_in_foster_care_count
@@ -157,7 +157,7 @@ with dogs as (
         ,reptiles_transfer_or_rescue_out_to_an_out_of_state_organization    as outcome_out_of_state_transfer
         ,reptiles_other_live_outcomes_ie_tnr_snr                            as outcome_other
         ,reptiles_died                                                      as outcome_deaths
-        ,reptiles_shelter_euthanasia                                        as outcome_euthanasia
+        ,total_reptiles_euthanasia                                          as outcome_euthanasia
         ,reptiles_missing_stolen                                            as outcome_missing_or_stolen
         ,reptiles_ending_count                                              as end_of_year_in_shelter_count
         ,reptiles_foster_count                                              as end_of_year_in_foster_care_count
@@ -180,7 +180,7 @@ with dogs as (
         ,rabbits_transfer_or_rescue_out_to_an_out_of_state_organization     as outcome_out_of_state_transfer
         ,rabbits_other_live_outcomes_ie_tnr_snr                             as outcome_other
         ,rabbits_died                                                       as outcome_deaths
-        ,rabbits_shelter_euthanasia                                         as outcome_euthanasia
+        ,total_rabbits_euthanasia                                           as outcome_euthanasia
         ,rabbits_missing_stolen                                             as outcome_missing_or_stolen
         ,rabbits_ending_count                                               as end_of_year_in_shelter_count
         ,rabbits_foster_count                                               as end_of_year_in_foster_care_count
@@ -203,7 +203,7 @@ with dogs as (
         ,other_transfer_or_rescue_out_to_an_out_of_state_organization   as outcome_out_of_state_transfer
         ,other_other_live_outcomes_ie_tnr_snr                           as outcome_other
         ,other_died                                                     as outcome_deaths
-        ,other_shelter_euthanasia                                       as outcome_euthanasia
+        ,total_other_euthanasia                                         as outcome_euthanasia
         ,other_missing_stolen                                           as outcome_missing_or_stolen
         ,other_ending_count                                             as end_of_year_in_shelter_count
         ,other_foster_count                                             as end_of_year_in_foster_care_count
