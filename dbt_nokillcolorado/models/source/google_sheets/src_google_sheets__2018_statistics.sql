@@ -1,5 +1,4 @@
 select 
--- list all columns, 0 out nulls
     facility_namex                                                                  as facility_name
     ,county                                                                         as facility_county
     ,coalesce(adult_dogs_in_shelter_count_as_of_1_1_2018,0)                         as adult_dogs_in_shelter_count_as_of_1_1_2018
@@ -21,6 +20,7 @@ select
     ,coalesce(adult_dogs_missing_stolen,0)                                          as adult_dogs_missing_stolen
     ,coalesce(adult_dogs_shelter_euthanasia,0)                                      as adult_dogs_shelter_euthanasia
     ,coalesce(adult_dogs_owner_requested_euthanasia,0)                              as adult_dogs_owner_requested_euthanasia
+    ,coalesce(adult_dogs_shelter_euthanasia,0) + coalesce(adult_dogs_owner_requested_euthanasia,0) as total_adult_dogs_euthanasia
     ,coalesce(adult_dogs_in_shelter_count_as_of_12_31_2018,0)                       as adult_dogs_in_shelter_count_as_of_12_31_2018
     ,coalesce(adult_dogs_in_foster_care_count_12_31_2018,0)                         as adult_dogs_in_foster_care_count_12_31_2018
     ,coalesce(juvenile_dogs_in_shelter_count_as_of_1_1_2018,0)                      as juvenile_dogs_in_shelter_count_as_of_1_1_2018
@@ -42,6 +42,7 @@ select
     ,coalesce(juvenile_dogs_missing_stolen,0)                                       as juvenile_dogs_missing_stolen
     ,coalesce(juvenile_dogs_shelter_euthanasia,0)                                   as juvenile_dogs_shelter_euthanasia
     ,coalesce(juvenile_dogs_owner_requested_euthanasia,0)                           as juvenile_dogs_owner_requested_euthanasia
+    ,coalesce(juvenile_dogs_shelter_euthanasia,0) + coalesce(juvenile_dogs_owner_requested_euthanasia,0) as total_juvenile_dogs_euthanasia
     ,coalesce(juvenile_dogs_in_shelter_count_as_of_12_31_2018,0)                    as juvenile_dogs_in_shelter_count_as_of_12_31_2018
     ,coalesce(juvenile_dogs_in_foster_care_count_12_31_2018,0)                      as juvenile_dogs_in_foster_care_count_12_31_2018
     ,coalesce(adult_cats_in_shelter_count_as_of_1_1_2018,0)                         as adult_cats_in_shelter_count_as_of_1_1_2018
@@ -62,6 +63,7 @@ select
     ,coalesce(adult_cats_missing_stolen,0)                                          as adult_cats_missing_stolen
     ,coalesce(adult_cats_shelter_euthanasia,0)                                      as adult_cats_shelter_euthanasia
     ,coalesce(adult_cats_owner_requested_euthanasia,0)                              as adult_cats_owner_requested_euthanasia
+    ,coalesce(adult_cats_shelter_euthanasia,0) + coalesce(adult_cats_owner_requested_euthanasia,0) as total_adult_cats_euthanasia
     ,coalesce(adult_cats_in_shelter_count_as_of_12_31_2018,0)                       as adult_cats_in_shelter_count_as_of_12_31_2018
     ,coalesce(adult_cats_in_foster_care_count_12_31_2018,0)                         as adult_cats_in_foster_care_count_12_31_2018
     ,coalesce(juvenile_cats_in_shelter_count_as_of_1_1_2018,0)                      as juvenile_cats_in_shelter_count_as_of_1_1_2018
@@ -83,6 +85,7 @@ select
     ,coalesce(juvenile_cats_missing_stolen,0)                                       as juvenile_cats_missing_stolen
     ,coalesce(juvenile_cats_shelter_euthanasia,0)                                   as juvenile_cats_shelter_euthanasia
     ,coalesce(juvenile_cats_owner_requested_euthanasia,0)                           as juvenile_cats_owner_requested_euthanasia
+    ,coalesce(juvenile_cats_shelter_euthanasia,0) + coalesce(juvenile_cats_owner_requested_euthanasia,0) as total_juvenile_cats_euthanasia
     ,coalesce(juvenile_cats_in_shelter_count_as_of_12_31_2018,0)                    as juvenile_cats_in_shelter_count_as_of_12_31_2018
     ,coalesce(juvenile_cats_in_foster_care_count_12_31_2018,0)                      as juvenile_cats_in_foster_care_count_12_31_2018
     ,coalesce(adult_cats_transferred_out_to_another_colorado_organization,0)        as adult_cats_transferred_out_to_another_colorado_organization
@@ -105,6 +108,7 @@ select
     ,coalesce(birds_missing_stolen,0)                                               as birds_missing_stolen
     ,coalesce(birds_shelter_euthanasia,0)                                           as birds_shelter_euthanasia
     ,coalesce(birds_owner_requested_euthanasia,0)                                   as birds_owner_requested_euthanasia
+    ,coalesce(birds_shelter_euthanasia,0) + coalesce(birds_owner_requested_euthanasia,0) as total_birds_euthanasia
     ,coalesce(birds_in_shelter_count_as_of_12_31_2018,0)                            as birds_in_shelter_count_as_of_12_31_2018
     ,coalesce(birds_in_foster_care_count_12_31_2018,0)                              as birds_in_foster_care_count_12_31_2018
     ,coalesce(small_mammal_in_shelter_count_as_of_1_1_2018,0)                       as small_mammal_in_shelter_count_as_of_1_1_2018
@@ -126,6 +130,7 @@ select
     ,coalesce(sm_mammal_missing_stolen,0)                                           as sm_mammal_missing_stolen
     ,coalesce(sm_mammal_shelter_euthanasia,0)                                       as sm_mammal_shelter_euthanasia
     ,coalesce(sm_mammal_owner_requested_euthanasia,0)                               as sm_mammal_owner_requested_euthanasia
+    ,coalesce(sm_mammal_shelter_euthanasia,0) + coalesce(sm_mammal_owner_requested_euthanasia,0) as total_sm_mammal_euthanasia
     ,coalesce(sm_mammal_in_shelter_count_as_of_12_31_2018,0)                        as sm_mammal_in_shelter_count_as_of_12_31_2018
     ,coalesce(sm_mammal_in_foster_care_count_as_of_12_31_2018,0)                    as sm_mammal_in_foster_care_count_as_of_12_31_2018
     ,coalesce(reptiles_amphibians_in_shelter_count_as_of_1_1_2018,0)                as reptiles_amphibians_in_shelter_count_as_of_1_1_2018
@@ -147,6 +152,7 @@ select
     ,coalesce(reptiles_amphibians_missing_stolen,0)                                 as reptiles_amphibians_missing_stolen
     ,coalesce(reptiles_amphibians_shelter_euthanasia,0)                             as reptiles_amphibians_shelter_euthanasia
     ,coalesce(reptiles_amphibians_owner_requested_euthanasia,0)                     as reptiles_amphibians_owner_requested_euthanasia
+    ,coalesce(reptiles_amphibians_shelter_euthanasia,0) + coalesce(reptiles_amphibians_owner_requested_euthanasia,0) as total_reptiles_euthanasia
     ,coalesce(reptiles_amphibians_in_shelter_count_as_of_12_31_2018,0)              as reptiles_amphibians_in_shelter_count_as_of_12_31_2018
     ,coalesce(reptiles_amphibians_in_foster_care_count_as_of_12_31_2018,0)          as reptiles_amphibians_in_foster_care_count_as_of_12_31_2018
     ,coalesce(rabbits_in_shelter_count_as_of_1_1_2018,0)                            as rabbits_in_shelter_count_as_of_1_1_2018
@@ -168,6 +174,7 @@ select
     ,coalesce(rabbits_missing_stolen,0)                                             as rabbits_missing_stolen
     ,coalesce(rabbits_shelter_euthanasia,0)                                         as rabbits_shelter_euthanasia
     ,coalesce(rabbits_owner_requested_euthanasia,0)                                 as rabbits_owner_requested_euthanasia
+    ,coalesce(rabbits_shelter_euthanasia,0) + coalesce(rabbits_owner_requested_euthanasia,0) as total_rabbits_euthanasia
     ,coalesce(rabbits_in_shelter_count_as_of_12_31_2018,0)                          as rabbits_in_shelter_count_as_of_12_31_2018
     ,coalesce(rabbits_in_foster_care_count_as_of_12_31_2018,0)                      as rabbits_in_foster_care_count_as_of_12_31_2018
     ,coalesce(other_in_shelter_count_as_of_1_1_2018,0)                              as other_in_shelter_count_as_of_1_1_2018
@@ -189,6 +196,7 @@ select
     ,coalesce(other_missing_stolen,0)                                               as other_missing_stolen
     ,coalesce(other_shelter_euthanasia,0)                                           as other_shelter_euthanasia
     ,coalesce(other_owner_requested_euthanasia,0)                                   as other_owner_requested_euthanasia
+    ,coalesce(other_shelter_euthanasia,0) + coalesce(other_owner_requested_euthanasia,0) as total_other_euthanasia
     ,coalesce(other_in_shelter_count_as_of_12_31_2018,0)                            as other_in_shelter_count_as_of_12_31_2018
     ,coalesce(other_in_foster_care_count_as_of_12_31_2018,0)                        as other_in_foster_care_count_as_of_12_31_2018
     ,_dlt_load_id
