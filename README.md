@@ -35,6 +35,8 @@ root
 └── google_sheets_pipeline.py  # dlt pipeline to ingest google sheet data into DuckDB
 ```
 
+There are many ways to install DuckDB and connect to a dataset, but the easiest might by via python and pip. If you have python & pip installed already, run `pip install duckdb` and then `duckdb path/to/your/data.duckdb` in the command line. A new interface should appear that allows you to write and enter SQL queries and get a response. Try starting with `show all tables;`.
+
 ### Getting Started
 
 If you would like to propose changes or just copy this repository and build locally from there, the following instructions should get you started. There are some installation prerequisites and this does assume a basic familiarity with the Terminal or other CLI.
