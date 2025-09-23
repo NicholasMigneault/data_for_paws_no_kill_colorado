@@ -16,7 +16,7 @@ Utilizing dltHub, dbt, & DuckDB to ingest, transform, and model years of Colorad
 ## Approach
 Tools like dbt and dltHub are an increasingly popular part of a modern data stack, in large part because they are open source, code first, and easily scale from a small proof of concept to a large deployment. Moving the entire development lifecycle (Ingestion, Transformation, Documentation) into versioned code increases accessibility and reduces blind spots for developers and downstream users.
 
-For the Data for Paws project, this repository serves as a foundation for scaling No Kill Colorado's data and reporting capabilities. dltHub makes refreshing changed data or adding new data sources easy. dbt is the best-in-class tool for making SQL the common language for transformation, is easily accessible, and removes reliance on manual transformations in google sheets. Lastly, DuckDB brings these two tools together providing an in-memory SQL database that prevents needing to deploy cloud resources and is easily portable if this project is ever migrated.
+In particular, this submission uses the following stack: DuckDB, dlt, and dbt. dltHub is a declarative pyhton package for data ingestion, and makes refreshing changed data or adding new years of data easy. The ingestion points to a single `data.duckdb` file, which is a database file format. DuckDB also has a python package that enables you to easily access and navigate the different data objects with the file format. Once data is landed into our DuckDB, we use dbt to consolidate and transform the data. dbt is a best-in-class tool for making SQL the common language for transformation. The open source package, dbt Core, is again a python package and makes writing and deploying SQL easy and accessible. Futher, dbt and DuckDB work hand-in-hand, as dbt can read the dlt-ingested files as sources and land the updated versions of the data into the same database, meaning a single file can contain our entire data lifecycle, from raw to reporting (aka mart). Lastly, DuckDB provides a solid founding that prevents needing to deploy cloud data resources, yet is easily portable to those same cloud resources, if this project ever needs migration.
 
 ### Navigating the Repo
 There are two key sub-folders, the `data` folder and the `dbt_nokillcolorado` folder. The root folder contains python scripts that heavily utilize dlt to load data into the `data.duckdb` database in the data folder. Then the SQL defined in `dbt_nokillcolorado` picks up that data from the database and transforms it to a pair of tables for reporting and analysis. These two tables are found in the `data.dbt_marts` schema of the database, and also copied into CSVs for ease of use. The join condition between the tables is `facility_sk`.
@@ -36,6 +36,8 @@ root
 ```
 
 ### Getting Started
+
+If you would like to propose changes or just copy this repository and build locally from there, the following instructions should get you started. There are some installation prerequisites and this does assume a basic familiarity with the Terminal or other CLI.
 
 **Pre-Recs:**
 - [git](https://git-scm.com/downloads)
@@ -89,5 +91,9 @@ root
 - Update marts documentation
 
 #### Other Reading
+- [dbt](https://www.getdbt.com/product/what-is-dbt)
+  - [dbt Core](https://github.com/dbt-labs/dbt-core) (Open Source version)
+- [dlt](https://dlthub.com/docs/intro)
+- [DuckDB](https://duckdb.org/)
 - [Modern Data Stack In-a-Box](https://duckdb.org/2022/10/12/modern-data-stack-in-a-box.html)
 - [UV](https://docs.astral.sh/uv/) for python package management
